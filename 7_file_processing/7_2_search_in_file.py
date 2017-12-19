@@ -25,12 +25,12 @@ count = 0
 line_count = 0
 
 for line in file_hand:
-    if line.startswith(search_value):
-        value_pos = line.find(':')
-        value = line[value_pos+1:].strip()
+    if not line.startswith(search_value): continue
 
-        count += float(value)
-        line_count += 1
+    value_pos = line.find(':')
+    value = line[value_pos + 1:].strip()
+    count += float(value)
+    line_count += 1
 
 try:
     average = count/line_count
