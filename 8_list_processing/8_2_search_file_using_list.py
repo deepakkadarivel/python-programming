@@ -25,4 +25,4 @@ for line in file_hand:
         print(line_list[1])
         parse_count += 1
 
-print(parse_count)
+print('There were', parse_count, 'lines in the file with From as the first word.')
