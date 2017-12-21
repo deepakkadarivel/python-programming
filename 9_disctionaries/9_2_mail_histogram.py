@@ -35,5 +35,13 @@ for line in file_hand:
     if len(line_list) > 0 and line_list[0] == 'From':
         line_dict[line_list[1]] = line_dict.get(line_list[1], 0) + 1
 
-max_mail = max(line_dict, key=line_dict.get)
-print(max_mail, line_dict[max_mail])
+max_key = None
+max_val = None
+
+for key, val in line_dict.items():
+    if max_val is None or val > max_val:
+        max_val = val
+        max_key = key
+
+# max_mail = max(line_dict, key=line_dict.get)
+print(max_key, max_val)
