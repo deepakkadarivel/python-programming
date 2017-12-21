@@ -49,4 +49,6 @@ for line in file_hand:
         hours[hour] = hours.get(hour, 0) + 1
 
 sorted_hours = sorted([(key, value) for (key, value) in hours.items()])
-print(sorted_hours)
+
+for hour, count in sorted_hours:
+    print(hour, count)
