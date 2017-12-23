@@ -24,7 +24,7 @@ file_name = '11_regex/mbox.txt'
 
 try:
     file_hand = open(file_name)
-except:
+except OSError:
     print('Cannot open file')
     sys.exit(0)
 
