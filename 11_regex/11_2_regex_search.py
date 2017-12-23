@@ -26,7 +26,7 @@ except OSError:
 
 numbers = list()
 for line in file_hand:
-    values = re.findall('^New Revision: ([0-9.]+)', line)
+    values = re.findall('^N.+?: ([0-9.]+)', line)
     if len(values) > 0:
         numbers.extend(list(map(int, values)))
 
